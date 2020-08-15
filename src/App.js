@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from 'react-bootstrap/Button';
 import './App.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import lighthouse from './lighthouse.jpg';
+import Image from 'react-bootstrap/Image';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar fixed="top">
+        <Navbar.Brand href="#home">Diana Zsigray</Navbar.Brand>
+        <Container className="justify-content-end">
+          <Nav.Link>About</Nav.Link>
+          <Nav.Link>Portfolio</Nav.Link>
+          <Nav.Link>Contact</Nav.Link>
+        </Container>
+
+      </Navbar>
+      <Image src={lighthouse} fluid />
+      <h1>Hello World</h1>
+      <Button>I made a button </Button>
+      <button> Button two!</button>
     </div>
   );
 }
